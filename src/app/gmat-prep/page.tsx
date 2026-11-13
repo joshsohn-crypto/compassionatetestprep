@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'GMAT Prep Tutoring Brooklyn NY | Compassionate Test Prep',
+    title: 'GMAT Prep Tutoring Brooklyn NY',
     description:
-        'GMAT prep tutoring in Brooklyn, NY. Expert coaching on Quantitative, Verbal, Integrated Reasoning, and Analytical Writing. Contact for a free intro session.',
+        'GMAT prep tutoring in Brooklyn, NY. Coaching for all three sections of the GMAT Focus Edition: Quantitative, Verbal and Data Insights. Contact for a free intro session.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/gmat-prep' },
 };
 
@@ -31,7 +31,7 @@ export default function GMATPage() {
                         <span className="bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full font-medium">Brooklyn, NY · Online Worldwide</span>
                         <h1 className="font-heading text-4xl md:text-5xl font-bold mt-5 mb-5">GMAT Prep Tutoring</h1>
                         <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                            Strategic, personalized GMAT coaching to get you into your target business school. All GMAT sections, from quant to verbal.
+                            Strategic, personalized GMAT coaching to get you into your target business school. All three sections of the GMAT Focus Edition.
                         </p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="gmat-cta-hero">Contact for a Free GMAT Session</Link>
                     </div>
@@ -39,13 +39,12 @@ export default function GMATPage() {
 
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="section-heading text-center mb-12">Complete GMAT Coverage</h2>
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <h2 className="section-heading text-center mb-12">The GMAT Focus Edition</h2>
+                        <div className="grid sm:grid-cols-3 gap-6">
                             {[
-                                { icon: '🔢', title: 'Quantitative Reasoning', desc: 'Problem solving and data sufficiency — algebra, geometry, and arithmetic.' },
-                                { icon: '📖', title: 'Verbal Reasoning', desc: 'Critical reasoning, reading comprehension, and sentence correction.' },
-                                { icon: '📊', title: 'Integrated Reasoning', desc: 'Multi-source reasoning, table analysis, and two-part analysis.' },
-                                { icon: '✍️', title: 'Analytical Writing', desc: 'Argument analysis essay — structure, critique, and writing under pressure.' },
+                                { icon: '🔢', title: 'Quantitative Reasoning', desc: 'Problem solving in arithmetic and algebra, with no geometry.' },
+                                { icon: '📖', title: 'Verbal Reasoning', desc: 'Critical reasoning and reading comprehension.' },
+                                { icon: '📊', title: 'Data Insights', desc: 'Data sufficiency, multi-source reasoning, table and graphics interpretation, and two-part analysis.' },
                             ].map((item) => (
                                 <div key={item.title} className="card text-center">
                                     <div className="text-4xl mb-3">{item.icon}</div>
@@ -59,9 +58,9 @@ export default function GMATPage() {
 
                 <section className="py-16 px-4 sm:px-6 bg-surface">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="section-heading mb-4">Why Choose Josh for GMAT Prep?</h2>
+                        <h2 className="section-heading mb-4">Why Work With Me on the GMAT?</h2>
                         <p className="text-muted leading-relaxed mb-6">
-                            With 25+ years of test prep experience and a deeply data-driven approach, Josh helps business school applicants understand <em>why</em> they miss questions — not just what the right answer is. This leads to durable score gains that hold up on test day.
+                            With 25+ years of test prep experience and a data-driven approach, I help business school applicants understand <em>why</em> they miss questions, not just what the right answer is.
                         </p>
                         <Link href="/contact" className="btn-primary" id="gmat-whyjosh-cta">Contact for a Free Session</Link>
                     </div>

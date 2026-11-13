@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'Tutor in Brooklyn, NY | SAT, ACT, GMAT, Regents | Compassionate Test Prep',
+    title: 'Tutor in Brooklyn, NY | SAT, ACT, GMAT, Regents',
     description:
-        'Looking for a tutor near you in Brooklyn, NY? Compassionate Test Prep offers expert SAT, ACT, GMAT, Regents, and math tutoring in Brooklyn. 25+ years, 2000+ students.',
+        'Looking for a tutor near you in Brooklyn, NY? Compassionate Test Prep offers expert SAT, ACT, GMAT, Regents, and math tutoring in Brooklyn. 25+ years, 2,200+ students.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/tutoring-brooklyn-ny' },
 };
 
@@ -17,7 +17,6 @@ const schema = {
     name: 'Compassionate Test Prep',
     description: 'Expert tutoring in Brooklyn, NY. SAT, ACT, GMAT, Regents, AP English, and math.',
     url: 'https://www.compassionatetestprep.com',
-    telephone: '+1-555-000-0000',
     address: {
         '@type': 'PostalAddress',
         streetAddress: '',
@@ -38,7 +37,6 @@ const schema = {
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '20:00' },
     ],
     hasMap: 'https://maps.google.com/?q=Brooklyn,NY',
-    sameAs: ['https://g.page/compassionate-test-prep'],
 };
 
 export default function BrooklynLocalPage() {
@@ -53,16 +51,16 @@ export default function BrooklynLocalPage() {
                         <div className="max-w-3xl">
                             <span className="bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full font-medium">📍 Brooklyn, New York</span>
                             <h1 className="font-heading text-4xl md:text-5xl font-bold mt-5 mb-5 leading-tight">
-                                Test Prep Tutor in <span className="text-accent">Brooklyn, NY</span>
+                                Test Prep Tutor in <span className="text-accent-light">Brooklyn, NY</span>
                             </h1>
                             <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl">
-                                Born and raised in Brooklyn, Josh has been serving local students with expert SAT, ACT, GMAT, Regents, and math tutoring since 2001. In-person in Brooklyn and online worldwide.
+                                Born and raised in Brooklyn, I&apos;ve tutored local students for the SAT, SHSAT, ACT and more since 2001. In person in Brooklyn and online.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link href="/contact" id="local-cta-primary" className="btn-primary text-base px-8 py-4">Contact for a Free Session</Link>
-                                <a href="tel:+15550000000" id="local-phone-cta" className="btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
-                                    📞 Call Now
-                                </a>
+                                <Link href="/practice-apps" id="local-apps-cta" className="btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
+                                    🚀 Try the Practice Apps
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -79,12 +77,12 @@ export default function BrooklynLocalPage() {
                         <div className="p-5 bg-bg rounded-xl">
                             <div className="text-2xl mb-2">🕐</div>
                             <div className="font-semibold text-primary text-sm">Hours</div>
-                            <div className="text-muted text-sm mt-1">Mon–Sat: 9 AM – 8 PM EST</div>
+                            <div className="text-muted text-sm mt-1">By appointment, weekdays and weekends</div>
                         </div>
                         <div className="p-5 bg-bg rounded-xl">
                             <div className="text-2xl mb-2">⭐</div>
                             <div className="font-semibold text-primary text-sm">Rating</div>
-                            <div className="text-muted text-sm mt-1">5.0 / 5.0 based on 4+ reviews</div>
+                            <div className="text-muted text-sm mt-1">5.0 / 5.0 based on 4 reviews</div>
                         </div>
                     </div>
                 </section>
@@ -95,12 +93,12 @@ export default function BrooklynLocalPage() {
                         <h2 className="section-heading text-center mb-12">Why Brooklyn Families Choose Compassionate Test Prep</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { icon: '🏘️', title: 'Local & Connected', desc: 'Born and raised in Brooklyn — Josh understands the NYC school system, local test schedules, and NY-specific Regents requirements.' },
-                                { icon: '📊', title: 'Data-Driven Results', desc: 'Josh tracks every error with proprietary data to run efficient sessions and deliver consistent score improvements.' },
+                                { icon: '🏘️', title: 'Local & Connected', desc: 'Born and raised in Brooklyn, a Stuyvesant grad. I understand the NYC school system, local test schedules, and NY-specific Regents requirements.' },
+                                { icon: '📊', title: 'Data-Driven Results', desc: 'I track every error with my own data, so sessions go straight to what matters.' },
                                 { icon: '💚', title: 'Compassionate Approach', desc: 'No anxiety, no drill-and-kill. Flexible, supportive tutoring that meets each student where they are.' },
                                 { icon: '🎯', title: 'Targeted Prep', desc: 'Sessions are customized to your student\'s exact gaps — never generic content review.' },
                                 { icon: '🖥️', title: 'In-Person & Online', desc: 'Available for in-person sessions in Brooklyn and remote sessions for students worldwide.' },
-                                { icon: '✅', title: '25+ Years Proven', desc: '2,000+ students served since 2001. Track record speaks for itself.' },
+                                { icon: '✅', title: '25+ Years Proven', desc: '2,200+ students since 2001.' },
                             ].map((item) => (
                                 <div key={item.title} className="card">
                                     <div className="text-3xl mb-3">{item.icon}</div>
@@ -134,27 +132,11 @@ export default function BrooklynLocalPage() {
                     </div>
                 </section>
 
-                {/* Google Maps placeholder */}
-                <section className="py-16 px-4 sm:px-6 bg-bg">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="section-heading text-center mb-8">Find Us in Brooklyn, NY</h2>
-                        <div className="bg-surface rounded-2xl overflow-hidden border border-gray-100 shadow-sm aspect-video flex items-center justify-center">
-                            <div className="text-center text-muted p-8">
-                                <div className="text-5xl mb-3">🗺️</div>
-                                <p className="text-sm">Google Maps embed will appear here.</p>
-                                <a href="https://maps.google.com/?q=Brooklyn,NY" target="_blank" rel="noopener noreferrer" id="google-maps-link" className="mt-4 inline-block text-accent text-sm font-medium hover:underline">
-                                    View on Google Maps →
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* CTA */}
                 <section className="py-16 px-4 sm:px-6 bg-primary text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="font-heading text-3xl font-bold text-white mb-4">Brooklyn&apos;s Most Compassionate Tutor</h2>
-                        <p className="text-white/80 mb-8">25+ years. 2,000+ students. Contact us for a free intro session today.</p>
+                        <p className="text-white/80 mb-8">25+ years. 2,200+ students. Book a free intro session today.</p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="local-cta-bottom">Contact for a Free Session</Link>
                     </div>
                 </section>

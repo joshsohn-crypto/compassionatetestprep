@@ -58,11 +58,11 @@ export default function TestimonialsPage() {
             <main>
                 <section className="bg-primary text-white py-20 px-4 sm:px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="font-heading text-4xl md:text-5xl font-bold mb-5">What Our Students & Parents Say</h1>
+                        <h1 className="font-heading text-4xl md:text-5xl font-bold mb-5">What My Students &amp; Parents Say</h1>
                         <div className="flex justify-center items-center gap-6 mt-6">
-                            <div className="text-center"><div className="font-heading text-3xl font-bold text-accent">5.0</div><div className="text-white/70 text-sm">Average Rating</div></div>
-                            <div className="text-accent text-2xl">★★★★★</div>
-                            <div className="text-center"><div className="font-heading text-3xl font-bold text-accent">{testimonials.length}+</div><div className="text-white/70 text-sm">Reviews</div></div>
+                            <div className="text-center"><div className="font-heading text-3xl font-bold text-accent-light">5.0</div><div className="text-white/70 text-sm">Average Rating</div></div>
+                            <div className="text-accent-light text-2xl">★★★★★</div>
+                            <div className="text-center"><div className="font-heading text-3xl font-bold text-accent-light">{testimonials.length}</div><div className="text-white/70 text-sm">Reviews</div></div>
                         </div>
                     </div>
                 </section>
@@ -93,7 +93,7 @@ export default function TestimonialsPage() {
                 <section className="py-16 px-4 sm:px-6 bg-primary text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="font-heading text-3xl font-bold text-white mb-4">Ready to Write Your Own Success Story?</h2>
-                        <p className="text-white/80 mb-8">Contact us for a free 30-minute intro session and see what Compassionate Test Prep can do for you.</p>
+                        <p className="text-white/80 mb-8">Book a free 30-minute intro session. No commitment, no pressure.</p>
                         <a href="/contact" className="btn-primary text-base px-8 py-4" id="testimonials-cta">Contact for a Free Session</a>
                     </div>
                 </section>

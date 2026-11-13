@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'Math Tutoring Brooklyn NY | Trig, Stats, Precalculus | Compassionate Test Prep',
+    title: 'Math Tutoring Brooklyn NY | Trig, Stats, Precalculus',
     description:
         'Expert math tutoring in Brooklyn, NY. Trigonometry, statistics, precalculus, algebra, and more. Personalized sessions that build real understanding and confidence.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/math-tutoring' },
@@ -54,7 +54,7 @@ export default function MathTutoringPage() {
 
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="section-heading text-center mb-12">Subjects We Cover</h2>
+                        <h2 className="section-heading text-center mb-12">Subjects I Cover</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { icon: '📐', title: 'Trigonometry', desc: 'Unit circle, trig identities, graphing, and applications.' },
@@ -77,7 +77,7 @@ export default function MathTutoringPage() {
                 <section className="py-16 px-4 sm:px-6 bg-primary text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="font-heading text-3xl font-bold text-white mb-4">Math Doesn&apos;t Have to Be Hard</h2>
-                        <p className="text-white/80 mb-8">Contact us for a free session and let Josh show your student exactly where they&apos;re stuck — and how to get unstuck.</p>
+                        <p className="text-white/80 mb-8">Book a free session and let me show your student exactly where they&apos;re stuck — and how to get unstuck.</p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="math-cta-bottom">Contact for a Free Session</Link>
                     </div>
                 </section>

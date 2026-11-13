@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'Test Prep Blog | Tips, Strategies & Study Guides | Compassionate Test Prep',
+    title: 'Test Prep Blog | Tips, Strategies & Study Guides',
     description:
         'Expert test prep tips, SAT/ACT strategies, and study guides from Compassionate Test Prep. Free resources for students and parents in Brooklyn, NY and beyond.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/blog' },
@@ -79,7 +79,7 @@ export default function BlogPage() {
                             ))}
                         </div>
                         <div className="mt-12 text-center">
-                            <p className="text-muted text-sm">More articles coming soon. Have a question? <Link href="/contact" className="text-accent hover:underline">Ask Josh directly →</Link></p>
+                            <p className="text-muted text-sm">Have a question? <Link href="/contact" className="text-accent hover:underline">Ask Josh directly →</Link></p>
                         </div>
                     </div>
                 </section>

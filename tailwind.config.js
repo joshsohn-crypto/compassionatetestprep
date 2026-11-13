@@ -8,24 +8,25 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                // Navy, brass and cream: the same family as my session reports and emails
                 primary: {
-                    DEFAULT: '#1A5C3A',
-                    light: '#2A7A50',
-                    dark: '#123F28',
+                    DEFAULT: '#1F3864',
+                    light: '#2A4F8F',
+                    dark: '#142850',
                 },
                 accent: {
-                    DEFAULT: '#E8643A',
-                    light: '#F07A52',
-                    dark: '#C94E28',
+                    DEFAULT: '#8A6A2E',
+                    light: '#D9B86A',
+                    dark: '#6E5323',
                 },
-                bg: '#F8F9FA',
+                bg: '#FAF7F2',
                 surface: '#FFFFFF',
-                textMain: '#1C2B2B',
-                muted: '#6B7280',
+                textMain: '#1C2433',
+                muted: '#5F6672',
             },
             fontFamily: {
-                heading: ['Lora', 'Georgia', 'serif'],
-                body: ['Inter', 'system-ui', 'sans-serif'],
+                heading: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                body: ['Georgia', '"Times New Roman"', 'serif'],
             },
             borderRadius: {
                 xl: '1rem',

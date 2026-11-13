@@ -8,7 +8,7 @@ import JsonLd from '@/components/JsonLd';
 export const metadata: Metadata = {
     title: 'About Josh | Expert Tutor in Brooklyn, NY',
     description:
-        "Meet Josh — Brooklyn-raised test prep tutor with 25+ years of experience and 2,000+ students helped. Learn about his data-driven, compassionate approach.",
+        "Meet Josh — Brooklyn-raised test prep tutor with 25+ years of experience and 2,200+ students helped. Learn about his data-driven, compassionate approach.",
     alternates: { canonical: 'https://www.compassionatetestprep.com/about' },
 };
 
@@ -18,7 +18,7 @@ const schema = {
     name: 'Josh',
     jobTitle: 'Test Prep Tutor',
     worksFor: { '@type': 'LocalBusiness', name: 'Compassionate Test Prep' },
-    description: 'Born and raised in Brooklyn, NY. Full-time tutor since 2001 with 2000+ students helped.',
+    description: 'Born and raised in Brooklyn, NY. Stuyvesant and Wesleyan graduate. Full-time tutor since 2001 with 2,200+ students.',
     address: { '@type': 'PostalAddress', addressLocality: 'Brooklyn', addressRegion: 'NY' },
 };
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="font-heading text-4xl md:text-5xl font-bold mb-5">Meet Josh</h1>
                         <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                            Brooklyn-born. Full-time tutor since 2001. 25+ years of experience, 2,000+ students, and a deeply data-driven approach that gets real results.
+                            Born and raised in Brooklyn. Stuyvesant and Wesleyan graduate. Full-time tutor since 2001, with more than 2,200 students and a calm, data-driven approach.
                         </p>
                     </div>
                 </section>
@@ -56,9 +56,10 @@ export default function AboutPage() {
                             <div className="mt-6 space-y-3">
                                 {[
                                     { icon: '📅', label: 'Tutoring Since', val: '2001' },
-                                    { icon: '👥', label: 'Students Helped', val: '2,000+' },
+                                    { icon: '👥', label: 'Students', val: '2,200+' },
+                                    { icon: '🎓', label: 'Education', val: 'Stuyvesant · Wesleyan' },
                                     { icon: '📍', label: 'Based In', val: 'Brooklyn, NY' },
-                                    { icon: '🌐', label: 'Also Available', val: 'Online Worldwide' },
+                                    { icon: '🧭', label: 'Practice Apps', val: 'SAT, PSAT, SHSAT, ACT' },
                                 ].map((item) => (
                                     <div key={item.label} className="flex items-center gap-3 bg-bg rounded-xl px-4 py-3">
                                         <span className="text-xl">{item.icon}</span>
@@ -75,7 +76,7 @@ export default function AboutPage() {
                             <h2 className="font-heading text-3xl font-bold text-primary mt-2 mb-6">A Brooklyn Tutor Who Gets It</h2>
                             <div className="space-y-4 text-textMain/80 leading-relaxed">
                                 <p>
-                                    Born and raised in Brooklyn, NY, I&apos;ve been tutoring full-time since 2001. That&apos;s over 2,000 students — and counting.
+                                    Born and raised in Brooklyn, I went to Stuyvesant and Wesleyan, and I&apos;ve been tutoring full-time since 2001. That&apos;s more than 2,200 students so far.
                                 </p>
                                 <p>
                                     When it comes to test prep, I&apos;m all about the data. From diagnosing students&apos; mistakes as careless or expected, to steering them to targeted online content review, to contextualizing their performance within proprietary historical student data — I believe in a systematic approach.

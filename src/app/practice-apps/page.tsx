@@ -77,7 +77,7 @@ export default function PracticeAppsPage() {
                         <h2 className="section-heading text-center mb-12">How it works</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { icon: '🗺️', title: 'Every skill is a stop on a map', desc: 'Students travel the world on the SAT, the solar system on the PSAT, the Midwest on the ACT and New York City on the SHSAT, earning levels, stamps and prizes along the way.' },
+                                { icon: '🗺️', title: 'Every skill is a stop on a map', desc: 'Students travel the world on the SAT, the solar system on the PSAT, Chicago on the ACT and New York City on the SHSAT, earning levels, stamps and prizes along the way.' },
                                 { icon: '📈', title: 'It adapts to each student', desc: 'New students start with easier questions, and everything ramps up as they get things right. Every question comes with a full explanation, including why each trap is tempting.' },
                                 { icon: '⏱️', title: 'Real test conditions', desc: 'Timed tests on screens that look and feel like test day, including the official SHSAT practice tests.' },
                             ].map((item) => (

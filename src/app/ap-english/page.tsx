@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'AP English Tutoring Brooklyn NY | Compassionate Test Prep',
+    title: 'AP English Tutoring Brooklyn NY',
     description:
         'AP English Language and Literature tutoring in Brooklyn, NY. Expert coaching for AP Lang and AP Lit exams. Build confidence in essay writing and analysis.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/ap-english' },

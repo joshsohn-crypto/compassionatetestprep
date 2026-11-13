@@ -6,9 +6,9 @@ import JsonLd from '@/components/JsonLd';
 import AppCallout from '@/components/AppCallout';
 
 export const metadata: Metadata = {
-    title: 'SAT Prep Tutoring Brooklyn NY | Score Guarantee',
+    title: 'SAT Prep Tutoring Brooklyn NY',
     description:
-        'Expert SAT prep tutoring in Brooklyn, NY. Data-driven approach, personalized sessions, and proven results. Students gain 100–250+ points on average. Contact for a free session.',
+        'One-on-one prep for the digital SAT and PSAT in Brooklyn, NY and online. A data-driven approach from a tutor with 25+ years and 2,200+ students. Contact for a free session.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/sat-prep' },
 };
 
@@ -39,7 +39,7 @@ export default function SATPage() {
                         <span className="bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full font-medium">Brooklyn, NY · Online</span>
                         <h1 className="font-heading text-4xl md:text-5xl font-bold mt-5 mb-5">SAT Prep Tutoring</h1>
                         <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                            Personalized, data-driven SAT coaching that targets your specific weak areas. Students gain an average of 100–250+ points.
+                            One-on-one, data-driven coaching for the digital SAT and PSAT, built around exactly what each student misses and why.
                         </p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="sat-cta-hero">Contact for a Free SAT Session</Link>
                     </div>
@@ -56,18 +56,18 @@ export default function SATPage() {
 
                 <AppCallout ids={['sat', 'psat']} title="Practice for the SAT and PSAT between sessions" />
 
-                {/* What we cover */}
+                {/* What I cover */}
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="section-heading text-center mb-12">What Our SAT Prep Covers</h2>
+                        <h2 className="section-heading text-center mb-12">What I Cover</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { icon: '📖', title: 'Reading Comprehension', desc: 'Passage analysis, inference questions, vocabulary in context.' },
-                                { icon: '✍️', title: 'Writing & Language', desc: 'Grammar rules, punctuation, sentence structure, and rhetoric.' },
-                                { icon: '🔢', title: 'Math (No Calculator)', desc: 'Algebra, problem-solving, and data analysis without a calculator.' },
-                                { icon: '🧮', title: 'Math (Calculator)', desc: 'Advanced math, additional topics, and complex word problems.' },
+                                { icon: '📖', title: 'Reading and Writing', desc: 'Short passages: words in context, inference, evidence, grammar and transitions, across two adaptive modules.' },
+                                { icon: '🔀', title: 'The Adaptive Format', desc: 'How the second module adapts to the first, and why the early questions matter so much.' },
+                                { icon: '🔢', title: 'Math', desc: 'Algebra, advanced math, problem-solving and data analysis, and geometry and trig.' },
+                                { icon: '🧮', title: 'Desmos', desc: 'The built-in graphing calculator, used on every math question where it saves time.' },
                                 { icon: '⏱️', title: 'Time Management', desc: 'Section-by-section pacing strategies to maximize score.' },
-                                { icon: '📊', title: 'Score Analysis', desc: 'Proprietary data to diagnose careless errors vs. knowledge gaps.' },
+                                { icon: '📊', title: 'Score Analysis', desc: 'My own data to separate careless errors from knowledge gaps.' },
                             ].map((item) => (
                                 <div key={item.title} className="card">
                                     <div className="text-3xl mb-3">{item.icon}</div>
@@ -83,7 +83,7 @@ export default function SATPage() {
                 <section className="py-16 px-4 sm:px-6 bg-primary text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="font-heading text-3xl font-bold text-white mb-4">Start Your SAT Prep Today</h2>
-                        <p className="text-white/80 mb-8">Contact us for a free 30-minute intro session — no commitment, just results.</p>
+                        <p className="text-white/80 mb-8">Book a free 30-minute intro session. No commitment, no pressure.</p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="sat-cta-bottom">Contact for a Free Session</Link>
                     </div>
                 </section>

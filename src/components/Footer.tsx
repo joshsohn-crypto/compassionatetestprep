@@ -22,14 +22,14 @@ export default function Footer() {
                         <span className="font-heading font-semibold text-lg">Compassionate Test Prep</span>
                     </div>
                     <p className="text-white/70 text-sm leading-relaxed">
-                        Expert tutoring in Brooklyn, NY. 25+ years of experience, 2,000+ students helped. Tutoring with heart.
+                        Expert tutoring in Brooklyn, NY. 25+ years of experience, 2,200+ students helped. Tutoring with heart.
                     </p>
                     <p className="mt-4 text-white/60 text-sm">📍 Brooklyn, NY</p>
                 </div>
 
                 {/* Services */}
                 <div>
-                    <h3 className="font-heading font-semibold text-base mb-4 text-white/90">Our Services</h3>
+                    <h3 className="font-heading font-semibold text-base mb-4 text-white/90">Services</h3>
                     <ul className="space-y-2">
                         {services.map((s) => (
                             <li key={s.href}>

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'NY Regents Review Tutoring Brooklyn | Compassionate Test Prep',
+    title: 'NY Regents Review Tutoring Brooklyn',
     description:
         'NY Regents exam prep tutoring in Brooklyn, NY. Pass your Regents exams with confidence. Expert coaching in all Regents subjects. Contact for a free session.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/regents-review' },
@@ -39,16 +39,14 @@ export default function RegentsPage() {
 
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="section-heading text-center mb-4">Subjects We Cover</h2>
-                        <p className="text-center text-muted mb-12 max-w-xl mx-auto">All major Regents exams, tailored to the specific format and content of each test.</p>
+                        <h2 className="section-heading text-center mb-4">Exams I Cover</h2>
+                        <p className="text-center text-muted mb-12 max-w-xl mx-auto">Math and English Regents, tailored to the format and content of each exam.</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { icon: '🔢', title: 'Algebra I & II' },
+                                { icon: '🔢', title: 'Algebra I' },
+                                { icon: '📈', title: 'Algebra II' },
                                 { icon: '📐', title: 'Geometry' },
-                                { icon: '🔬', title: 'Living Environment' },
-                                { icon: '⚗️', title: 'Chemistry & Physics' },
                                 { icon: '📖', title: 'English Language Arts' },
-                                { icon: '🌍', title: 'Global & US History' },
                             ].map((item) => (
                                 <div key={item.title} className="card flex items-center gap-4">
                                     <div className="text-3xl">{item.icon}</div>
@@ -62,7 +60,7 @@ export default function RegentsPage() {
                 <section className="py-16 px-4 sm:px-6 bg-primary text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="font-heading text-3xl font-bold text-white mb-4">Don&apos;t Leave Graduation to Chance</h2>
-                        <p className="text-white/80 mb-8">Start Regents review early for the best results. Contact us for a free intro session today.</p>
+                        <p className="text-white/80 mb-8">Start Regents review early for the best results. Book a free intro session today.</p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="regents-cta-bottom">Contact for a Free Session</Link>
                     </div>
                 </section>

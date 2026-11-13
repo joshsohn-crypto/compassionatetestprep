@@ -50,7 +50,7 @@ export default function ContactPage() {
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="font-heading text-4xl md:text-5xl font-bold mb-5">Contact for a Free Intro Session</h1>
                         <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                            No commitment, no pressure. Contact us for a free 30-minute session to meet Josh, discuss your goals, and see if it&apos;s a great fit.
+                            No commitment, no pressure. Book a free 30-minute session to meet me, talk through your goals and see if it&apos;s a good fit.
                         </p>
                     </div>
                 </section>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                             {status === 'success' ? (
                                 <div className="rounded-xl bg-green-50 border border-green-200 p-6 text-center">
                                     <p className="text-green-700 font-semibold text-lg mb-1">Message sent!</p>
-                                    <p className="text-green-600 text-sm">Thanks for reaching out. Josh will get back to you within 24 hours.</p>
+                                    <p className="text-green-600 text-sm">Thanks for reaching out. I&apos;ll get back to you within 24 hours.</p>
                                 </div>
                             ) : (
                                 <form className="space-y-4" id="contact-form" onSubmit={handleSubmit} noValidate>
@@ -89,13 +89,15 @@ export default function ContactPage() {
                                             <option>ACT Prep</option>
                                             <option>GMAT Prep</option>
                                             <option>Regents Review</option>
+                                            <option>SHSAT Prep</option>
+                                            <option>PSAT Prep</option>
                                             <option>AP English</option>
                                             <option>Math Tutoring</option>
                                             <option>Other</option>
                                         </select>
                                     </div>
                                     <div>
-                                        <label htmlFor="message" className="block text-sm font-medium text-textMain mb-1">Tell us about your goals</label>
+                                        <label htmlFor="message" className="block text-sm font-medium text-textMain mb-1">Tell me about your goals</label>
                                         <textarea id="message" name="message" rows={5} className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors resize-none" placeholder="e.g. My daughter needs to raise her SAT score from 1100 to 1350 by March..." />
                                     </div>
 
@@ -122,11 +124,7 @@ export default function ContactPage() {
                                 </div>
                                 <div className="flex items-center gap-3 text-sm text-muted">
                                     <span className="text-primary text-lg">🕐</span>
-                                    <span>Mon–Sat: 9:00 AM – 8:00 PM EST</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-sm text-muted">
-                                    <span className="text-primary text-lg">🌐</span>
-                                    <span>Google Business Profile: <a href="https://g.page/compassionate-test-prep" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline" id="gbp-link">View on Google Maps</a></span>
+                                    <span>Sessions by appointment, weekdays and weekends</span>
                                 </div>
                             </div>
                         </div>

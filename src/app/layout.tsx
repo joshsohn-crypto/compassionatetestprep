@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         template: '%s | Compassionate Test Prep',
     },
     description:
-        'Expert SAT, ACT, GMAT, Regents, AP English, and math tutoring in Brooklyn, NY. 25+ years, 2000+ students. Tutoring with heart.',
+        'One-on-one SAT, SHSAT and ACT prep in Brooklyn and online from Josh Sohn: 25+ years, 2,200+ students, and practice apps he built himself.',
     metadataBase: new URL('https://www.compassionatetestprep.com'),
     openGraph: {
         siteName: 'Compassionate Test Prep',

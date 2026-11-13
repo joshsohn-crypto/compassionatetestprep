@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 // This is a static blog post template.
 // In a future phase, replace with MDX or a headless CMS like Sanity.
 export const metadata: Metadata = {
-    title: 'Blog Post | Compassionate Test Prep',
+    title: 'Blog Post',
 };
 
 const posts: Record<string, {
@@ -46,9 +46,9 @@ The question every family asks — here's how to decide.
 Take both a real SAT practice test and a real ACT practice test, convert the scores to a common scale, and go with whichever is higher. Simple.
 
 **Key Differences**
-- The ACT has a Science section (the SAT does not)
+- The ACT has an optional Science section (the SAT has none)
 - The SAT is more puzzle-oriented; the ACT is more straightforward
-- The ACT is faster-paced (more questions per minute)
+- The ACT is faster-paced, though the 2025 enhanced ACT gives more time per question than before
 - Both are accepted equally by all U.S. colleges
 
 **Signs Your Child Might Prefer the ACT**

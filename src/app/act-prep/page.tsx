@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
+import AppCallout from '@/components/AppCallout';
 
 export const metadata: Metadata = {
     title: 'ACT Prep Tutoring Brooklyn NY | Compassionate Test Prep',
@@ -36,6 +37,8 @@ export default function ACTPage() {
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="act-cta-hero">Contact for a Free ACT Session</Link>
                     </div>
                 </section>
+
+                <AppCallout ids={['act']} title="Practice for the ACT between sessions" />
 
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">

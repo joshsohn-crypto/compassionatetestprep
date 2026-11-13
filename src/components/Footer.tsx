@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { practiceApps } from '@/lib/apps';
 
 const services = [
     { href: '/sat-prep', label: 'SAT Prep' },
@@ -12,7 +13,7 @@ const services = [
 export default function Footer() {
     return (
         <footer className="bg-primary text-white">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
                 {/* Brand */}
                 <div>
                     <div className="flex items-center gap-2 mb-4">
@@ -36,6 +37,23 @@ export default function Footer() {
                                 </Link>
                             </li>
                         ))}
+                    </ul>
+                </div>
+
+                {/* Practice Apps */}
+                <div>
+                    <h3 className="font-heading font-semibold text-base mb-4 text-white/90">Practice Apps</h3>
+                    <ul className="space-y-2">
+                        {practiceApps.map((a) => (
+                            <li key={a.id}>
+                                <a href={a.href} target="_blank" rel="noopener" className="text-white/70 hover:text-white text-sm transition-colors">
+                                    {a.icon} {a.name} ↗
+                                </a>
+                            </li>
+                        ))}
+                        <li>
+                            <Link href="/practice-apps" className="text-white/70 hover:text-white text-sm transition-colors">How the apps work</Link>
+                        </li>
                     </ul>
                 </div>
 

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
+import AppCallout from '@/components/AppCallout';
 
 export const metadata: Metadata = {
     title: 'SAT Prep Tutoring Brooklyn NY | Score Guarantee',
@@ -52,6 +53,8 @@ export default function SATPage() {
                         <p className="text-muted italic max-w-xl mx-auto">&ldquo;Josh really took the time to figure out where I needed help and broke things down in a way that made sense. The SAT can feel overwhelming, but Josh made it way less stressful.&rdquo;</p>
                     </div>
                 </section>
+
+                <AppCallout ids={['sat', 'psat']} title="Practice for the SAT and PSAT between sessions" />
 
                 {/* What we cover */}
                 <section className="py-20 px-4 sm:px-6 bg-bg">

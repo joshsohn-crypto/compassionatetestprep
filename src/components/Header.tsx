@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import { practiceApps } from '@/lib/apps';
 
 const navLinks = [
     { href: '/', label: 'Home' },
@@ -27,6 +28,17 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+            {/* Site-wide practice apps bar */}
+            <div className="bg-accent text-white text-xs sm:text-sm" id="apps-bar">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                    <span className="font-semibold">✨ New: free practice apps</span>
+                    {practiceApps.map((a) => (
+                        <a key={a.id} href={a.href} target="_blank" rel="noopener" className="underline underline-offset-2 decoration-white/60 hover:decoration-white font-medium" id={`apps-bar-${a.id}`}>
+                            {a.icon} {a.name}
+                        </a>
+                    ))}
+                </div>
+            </div>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group" id="site-logo">
@@ -71,8 +83,11 @@ export default function Header() {
                             <Link
                                 key={link.href}
                                 href={link.href!}
-                                className="text-textMain hover:text-primary transition-colors"
+                                className={link.href === '/practice-apps'
+                                    ? 'inline-flex items-center gap-1.5 bg-primary/10 text-primary font-semibold px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors'
+                                    : 'text-textMain hover:text-primary transition-colors'}
                             >
+                                {link.href === '/practice-apps' && <span aria-hidden>🚀</span>}
                                 {link.label}
                             </Link>
                         )
@@ -127,6 +142,7 @@ export default function Header() {
                             ))}
                         </div>
                     )}
+                    <Link href="/practice-apps" className="block py-2 text-primary font-semibold" onClick={() => setMobileOpen(false)} id="mobile-apps-link">🚀 Practice Apps</Link>
                     <Link href="/about" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>About</Link>
                     <Link href="/testimonials" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>Testimonials</Link>
                     <Link href="/blog" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>Blog</Link>

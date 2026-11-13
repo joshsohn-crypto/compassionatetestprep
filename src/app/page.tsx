@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
+import { practiceApps } from '@/lib/apps';
 
 export const metadata: Metadata = {
     title: 'Expert Test Prep Tutoring in Brooklyn, NY | Compassionate Test Prep',
@@ -108,10 +109,19 @@ export default function HomePage() {
                                 <Link href="/contact" id="hero-cta-primary" className="btn-primary text-base px-8 py-4">
                                     Contact for a Free Session
                                 </Link>
-                                <Link href="#services" id="hero-cta-secondary" className="btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
-                                    Our Services
+                                <Link href="#practice-apps" id="hero-cta-apps" className="btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
+                                    🚀 Try the Free Practice Apps
                                 </Link>
                             </div>
+                            <p className="mt-4 text-white/70 text-sm">
+                                Or jump straight in:{' '}
+                                {practiceApps.map((a, i) => (
+                                    <span key={a.id}>
+                                        <a href={a.href} target="_blank" rel="noopener" className="text-white underline underline-offset-2 hover:text-accent" id={`hero-app-${a.id}`}>{a.name}</a>
+                                        {i < practiceApps.length - 1 ? ' · ' : ''}
+                                    </span>
+                                ))}
+                            </p>
                         </div>
                         {/* Hero image + stats */}
                         <div className="flex-shrink-0 flex flex-col gap-4 w-full md:w-72">
@@ -139,6 +149,41 @@ export default function HomePage() {
                                     <div className="text-white/70 text-sm">{s.label}</div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ───── PRACTICE APPS ───── */}
+                <section id="practice-apps" className="py-20 px-4 sm:px-6 bg-primary/5 border-b border-primary/10">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-10">
+                            <span className="inline-block bg-accent text-white text-xs font-bold tracking-wider px-3 py-1 rounded-full">NEW · FREE IN EARLY ACCESS</span>
+                            <h2 className="section-heading mt-4">Try the practice apps my students use</h2>
+                            <p className="section-subheading max-w-2xl mx-auto">
+                                Every skill is a stop on a map, with adaptive questions, timed tests and full explanations. Pick your test and start practicing in under a minute.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {practiceApps.map((a) => (
+                                <a key={a.id} href={a.href} target="_blank" rel="noopener" className="group bg-surface rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col" id={`home-app-${a.id}`}>
+                                    {a.img ? (
+                                        <div className="relative w-full aspect-[16/10] overflow-hidden bg-primary/5">
+                                            <Image src={a.img} alt={`${a.name} map`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                                        </div>
+                                    ) : (
+                                        <div className="w-full aspect-[16/10] bg-primary flex items-center justify-center text-6xl">{a.icon}</div>
+                                    )}
+                                    <div className="p-5 flex flex-col flex-1">
+                                        <div className="text-xs text-accent font-semibold mb-1">For {a.who.toLowerCase().replace('act', 'ACT')}</div>
+                                        <h3 className="font-heading font-semibold text-xl text-primary mb-1">{a.icon} {a.name}</h3>
+                                        <p className="text-muted text-sm leading-relaxed flex-1">{a.short}</p>
+                                        <div className="mt-4 btn-primary text-sm py-2 justify-center">Start {a.name} →</div>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                        <div className="text-center mt-8">
+                            <Link href="/practice-apps" className="text-primary font-semibold hover:text-accent" id="home-apps-more">How the apps work and what families see →</Link>
                         </div>
                     </div>
                 </section>
@@ -178,25 +223,6 @@ export default function HomePage() {
                                 </Link>
                             ))}
                         </div>
-                    </div>
-                </section>
-
-                {/* ───── PRACTICE APPS ───── */}
-                <section id="practice-apps" className="py-20 px-4 sm:px-6 bg-primary/5">
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                        <div>
-                            <span className="text-accent font-semibold tracking-wider text-sm">NEW · PRACTICE APPS</span>
-                            <h2 className="section-heading mt-2">The practice tools my students use</h2>
-                            <p className="section-subheading">
-                                SAT, PSAT, ACT and SHSAT Blaster turn practice into a journey: every skill is a stop on a map, with adaptive questions, timed tests and full explanations. Now in early access.
-                            </p>
-                            <div className="mt-6 flex flex-wrap gap-3">
-                                <Link href="/practice-apps" className="btn-primary" id="home-apps-cta">Explore the apps →</Link>
-                            </div>
-                        </div>
-                        <Link href="/practice-apps" className="block relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow" id="home-apps-image">
-                            <Image src="/apps/shsat-blaster-nyc.jpg" alt="SHSAT Blaster New York City map" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                        </Link>
                     </div>
                 </section>
 

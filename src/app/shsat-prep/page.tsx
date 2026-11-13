@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import AppCallout from '@/components/AppCallout';
 
 export const metadata: Metadata = {
-    title: 'SHSAT Prep Tutoring Brooklyn NY | Compassionate Test Prep',
+    title: 'SHSAT Prep Tutoring Brooklyn NY',
     description:
         'One-on-one SHSAT tutoring in Brooklyn, NY from a Stuyvesant graduate with 25+ years of test prep experience. Practice in the real on-screen format with SHSAT Blaster. Contact for a free session.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/shsat-prep' },

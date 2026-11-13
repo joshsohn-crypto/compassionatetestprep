@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'Practice Apps for the SAT, PSAT, ACT & SHSAT | Compassionate Test Prep',
+    title: 'Practice Apps for the SAT, PSAT, ACT & SHSAT',
     description:
         'SAT Blaster, PSAT Blaster, ACT Blaster and SHSAT Blaster: the practice apps Josh Sohn built for his own students. Every skill is a stop on a map, with adaptive practice, timed tests and full explanations.',
     alternates: { canonical: 'https://www.compassionatetestprep.com/practice-apps' },

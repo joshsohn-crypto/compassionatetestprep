@@ -46,7 +46,7 @@ export default function Header() {
                     <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-heading font-bold text-sm">
                         CTP
                     </span>
-                    <span className="font-heading font-semibold text-primary text-lg leading-tight hidden sm:block">
+                    <span className="font-heading font-bold text-primary text-xl leading-none hidden sm:block">
                         Compassionate<br />
                         <span className="text-accent text-sm font-medium">Test Prep</span>
                     </span>

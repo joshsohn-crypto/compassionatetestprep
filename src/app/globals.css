@@ -15,7 +15,7 @@
     @apply font-heading;
   }
   /* Cormorant runs small and light: give headings a touch more size and weight */
-  h1, h2, h3, .font-heading { font-weight: 600; letter-spacing: 0.005em; }
+  h1, h2, h3, .font-heading { font-weight: 600; letter-spacing: 0.005em; font-variant-numeric: lining-nums; }
   ::selection { background: #D9B86A55; }
 }
 

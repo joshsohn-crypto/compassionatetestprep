@@ -42,3 +42,31 @@
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #F8F9FA; }
 ::-webkit-scrollbar-thumb { background: #1A5C3A; border-radius: 3px; }
+
+/* ───── Practice apps motion ───── */
+.motion [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.motion [data-reveal].in { opacity: 1; transform: none; }
+
+/* maps drift slowly, like the camera is panning across them */
+@keyframes map-drift { 0% { transform: scale(1.06) translate(0, 0); } 50% { transform: scale(1.12) translate(-2.5%, -2%); } 100% { transform: scale(1.06) translate(0, 0); } }
+.map-drift img { animation: map-drift 18s ease-in-out infinite; transform-origin: center; }
+.map-drift:nth-child(2n) img { animation-duration: 22s; animation-direction: reverse; }
+
+/* the little icons bob and the rocket in the menu takes off on hover */
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.bob { display: inline-block; animation: bob 2.4s ease-in-out infinite; }
+@keyframes liftoff { 0% { transform: none; } 40% { transform: translate(2px,-4px) rotate(-8deg); } 100% { transform: none; } }
+.liftoff:hover .rocket { animation: liftoff .6s ease-in-out 2; }
+.rocket { display: inline-block; }
+
+/* a soft glow pulses around the hero apps button */
+@keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.45); } 50% { box-shadow: 0 0 0 10px rgba(255,255,255,0); } }
+.glow { animation: glow 2.6s ease-in-out infinite; }
+
+/* a light sweep travels across the announcement bar */
+@keyframes sweep { 0% { background-position: -150% 0; } 100% { background-position: 250% 0; } }
+.sweep { background-image: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.22) 50%, transparent 70%); background-size: 50% 100%; background-repeat: no-repeat; animation: sweep 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .map-drift img, .bob, .glow, .sweep, .liftoff:hover .rocket { animation: none !important; }
+}

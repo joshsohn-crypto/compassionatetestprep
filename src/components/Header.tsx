@@ -29,9 +29,9 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md shadow-sm border-b border-gray-100">
             {/* Site-wide practice apps bar */}
-            <div className="bg-accent text-white text-xs sm:text-sm" id="apps-bar">
+            <div className="bg-accent text-white text-xs sm:text-sm sweep" id="apps-bar">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-                    <span className="font-semibold">✨ New: free practice apps</span>
+                    <span className="font-semibold"><span className="bob">✨</span> New: free practice apps</span>
                     {practiceApps.map((a) => (
                         <a key={a.id} href={a.href} target="_blank" rel="noopener" className="underline underline-offset-2 decoration-white/60 hover:decoration-white font-medium" id={`apps-bar-${a.id}`}>
                             {a.icon} {a.name}
@@ -84,10 +84,10 @@ export default function Header() {
                                 key={link.href}
                                 href={link.href!}
                                 className={link.href === '/practice-apps'
-                                    ? 'inline-flex items-center gap-1.5 bg-primary/10 text-primary font-semibold px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors'
+                                    ? 'liftoff inline-flex items-center gap-1.5 bg-primary/10 text-primary font-semibold px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors'
                                     : 'text-textMain hover:text-primary transition-colors'}
                             >
-                                {link.href === '/practice-apps' && <span aria-hidden>🚀</span>}
+                                {link.href === '/practice-apps' && <span aria-hidden className="rocket">🚀</span>}
                                 {link.label}
                             </Link>
                         )

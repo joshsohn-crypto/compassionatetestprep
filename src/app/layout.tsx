@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Motion from '@/components/Motion';
 
 export const metadata: Metadata = {
     title: {
@@ -30,7 +31,7 @@ export default function RootLayout({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             </head>
-            <body>{children}</body>
+            <body>{children}<Motion /></body>
         </html>
     );
 }

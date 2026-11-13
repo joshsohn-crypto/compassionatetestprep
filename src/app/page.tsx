@@ -109,7 +109,7 @@ export default function HomePage() {
                                 <Link href="/contact" id="hero-cta-primary" className="btn-primary text-base px-8 py-4">
                                     Contact for a Free Session
                                 </Link>
-                                <Link href="#practice-apps" id="hero-cta-apps" className="btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
+                                <Link href="#practice-apps" id="hero-cta-apps" className="glow btn-outline border-white text-white hover:bg-white hover:text-primary text-base px-8 py-4">
                                     🚀 Try the Free Practice Apps
                                 </Link>
                             </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
                 {/* ───── PRACTICE APPS ───── */}
                 <section id="practice-apps" className="py-20 px-4 sm:px-6 bg-primary/5 border-b border-primary/10">
                     <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-10">
+                        <div className="text-center mb-10" data-reveal>
                             <span className="inline-block bg-accent text-white text-xs font-bold tracking-wider px-3 py-1 rounded-full">NEW · FREE IN EARLY ACCESS</span>
                             <h2 className="section-heading mt-4">Try the practice apps my students use</h2>
                             <p className="section-subheading max-w-2xl mx-auto">
@@ -164,18 +164,18 @@ export default function HomePage() {
                             </p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {practiceApps.map((a) => (
-                                <a key={a.id} href={a.href} target="_blank" rel="noopener" className="group bg-surface rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col" id={`home-app-${a.id}`}>
+                            {practiceApps.map((a, i) => (
+                                <a key={a.id} href={a.href} target="_blank" rel="noopener" data-reveal style={{ transitionDelay: `${i * 120}ms` }} className="group bg-surface rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col" id={`home-app-${a.id}`}>
                                     {a.img ? (
-                                        <div className="relative w-full aspect-[16/10] overflow-hidden bg-primary/5">
-                                            <Image src={a.img} alt={`${a.name} map`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                                        <div className="map-drift relative w-full aspect-[16/10] overflow-hidden bg-primary/5">
+                                            <Image src={a.img} alt={`${a.name} map`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                                         </div>
                                     ) : (
                                         <div className="w-full aspect-[16/10] bg-primary flex items-center justify-center text-6xl">{a.icon}</div>
                                     )}
                                     <div className="p-5 flex flex-col flex-1">
                                         <div className="text-xs text-accent font-semibold mb-1">For {a.who.toLowerCase().replace('act', 'ACT')}</div>
-                                        <h3 className="font-heading font-semibold text-xl text-primary mb-1">{a.icon} {a.name}</h3>
+                                        <h3 className="font-heading font-semibold text-xl text-primary mb-1"><span className="bob" style={{ animationDelay: `${i * 300}ms` }}>{a.icon}</span> {a.name}</h3>
                                         <p className="text-muted text-sm leading-relaxed flex-1">{a.short}</p>
                                         <div className="mt-4 btn-primary text-sm py-2 justify-center">Start {a.name} →</div>
                                     </div>

@@ -48,8 +48,8 @@ const apps = [
         name: 'ACT Blaster',
         who: 'For students taking the ACT',
         desc: 'The same approach for the ACT, with practice built from real ACT data and a journey through the Midwest.',
-        img: null,
-        alt: '',
+        img: '/apps/act-blaster-chicago.jpg',
+        alt: 'ACT Blaster Chicago map',
         href: 'https://ctp-act-blaster.netlify.app/?src=site',
     },
 ];
@@ -81,8 +81,8 @@ export default function PracticeAppsPage() {
                                 { icon: '📈', title: 'It adapts to each student', desc: 'New students start with easier questions, and everything ramps up as they get things right. Every question comes with a full explanation, including why each trap is tempting.' },
                                 { icon: '⏱️', title: 'Real test conditions', desc: 'Timed tests on screens that look and feel like test day, including the official SHSAT practice tests.' },
                             ].map((item) => (
-                                <div key={item.title} className="card">
-                                    <div className="text-3xl mb-3">{item.icon}</div>
+                                <div key={item.title} className="card" data-reveal>
+                                    <div className="text-3xl mb-3"><span className="bob">{item.icon}</span></div>
                                     <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
                                     <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
                                 </div>
@@ -107,10 +107,10 @@ export default function PracticeAppsPage() {
                     <div className="max-w-6xl mx-auto">
                         <h2 className="section-heading text-center mb-12">The apps</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {apps.map((a) => (
-                                <div key={a.id} className="bg-surface rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col" id={`app-card-${a.id}`}>
+                            {apps.map((a, i) => (
+                                <div key={a.id} data-reveal style={{ transitionDelay: `${(i % 2) * 120}ms` }} className="bg-surface rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col" id={`app-card-${a.id}`}>
                                     {a.img ? (
-                                        <div className="relative w-full aspect-[16/9] overflow-hidden bg-primary/5">
+                                        <div className="map-drift relative w-full aspect-[16/9] overflow-hidden bg-primary/5">
                                             <Image src={a.img} alt={a.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                                         </div>
                                     ) : (

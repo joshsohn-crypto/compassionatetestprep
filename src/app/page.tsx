@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const services = [
     { href: '/sat-prep', icon: '📝', title: 'SAT Prep', desc: 'Data-driven SAT prep that targets your specific gaps and boosts scores.', img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop&q=70' },
+    { href: '/shsat-prep', icon: '🗽', title: 'SHSAT Prep', desc: 'One-on-one prep for the specialized high schools test, from a Stuyvesant grad.', img: '/apps/shsat-blaster-nyc.jpg' },
     { href: '/act-prep', icon: '🎯', title: 'ACT Prep', desc: 'Comprehensive ACT strategies for all four test sections.', img: 'https://images.unsplash.com/photo-1581726707445-75cbe4efc586?w=600&auto=format&fit=crop&q=70' },
     { href: '/gmat-prep', icon: '📊', title: 'GMAT Prep', desc: 'Analytical and verbal GMAT coaching for business school applicants.', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=70' },
     { href: '/regents-review', icon: '🏫', title: 'Regents Review', desc: 'NY Regents exam prep across all tested subjects.', img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop&q=70' },

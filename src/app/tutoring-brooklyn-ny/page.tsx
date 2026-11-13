@@ -119,6 +119,7 @@ export default function BrooklynLocalPage() {
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                             {[
                                 { href: '/sat-prep', label: 'SAT Prep' },
+                                { href: '/shsat-prep', label: 'SHSAT Prep' },
                                 { href: '/act-prep', label: 'ACT Prep' },
                                 { href: '/gmat-prep', label: 'GMAT Prep' },
                                 { href: '/regents-review', label: 'Regents Review' },

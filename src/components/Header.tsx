@@ -9,6 +9,7 @@ const navLinks = [
         label: 'Services',
         children: [
             { href: '/sat-prep', label: 'SAT Prep' },
+            { href: '/shsat-prep', label: 'SHSAT Prep' },
             { href: '/act-prep', label: 'ACT Prep' },
             { href: '/gmat-prep', label: 'GMAT Prep' },
             { href: '/regents-review', label: 'Regents Review' },

@@ -93,6 +93,7 @@ export default function ContactPage() {
                                             <option>PSAT Prep</option>
                                             <option>AP English</option>
                                             <option>Math Tutoring</option>
+                                            <option>Physics</option>
                                             <option>Other</option>
                                         </select>
                                     </div>
@@ -121,6 +122,10 @@ export default function ContactPage() {
                                 <div className="flex items-center gap-3 text-sm text-muted">
                                     <span className="text-primary text-lg">📍</span>
                                     <span>Brooklyn, NY (in-person &amp; online)</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-sm text-muted">
+                                    <span className="text-primary text-lg">✉️</span>
+                                    <span>Or email me directly: <a href="mailto:josh@compassionatetestprep.com" className="text-accent hover:underline" id="contact-email">josh@compassionatetestprep.com</a></span>
                                 </div>
                                 <div className="flex items-center gap-3 text-sm text-muted">
                                     <span className="text-primary text-lg">🕐</span>

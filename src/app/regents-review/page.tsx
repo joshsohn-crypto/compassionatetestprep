@@ -40,12 +40,13 @@ export default function RegentsPage() {
                 <section className="py-20 px-4 sm:px-6 bg-bg">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="section-heading text-center mb-4">Exams I Cover</h2>
-                        <p className="text-center text-muted mb-12 max-w-xl mx-auto">Math and English Regents, tailored to the format and content of each exam.</p>
+                        <p className="text-center text-muted mb-12 max-w-xl mx-auto">Math, physics and English Regents, tailored to the format and content of each exam.</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { icon: '🔢', title: 'Algebra I' },
                                 { icon: '📈', title: 'Algebra II' },
                                 { icon: '📐', title: 'Geometry' },
+                                { icon: '⚛️', title: 'Physics' },
                                 { icon: '📖', title: 'English Language Arts' },
                             ].map((item) => (
                                 <div key={item.title} className="card flex items-center gap-4">

@@ -14,12 +14,11 @@ const navLinks = [
             { href: '/gmat-prep', label: 'GMAT Prep' },
             { href: '/regents-review', label: 'Regents Review' },
             { href: '/ap-english', label: 'AP English' },
-            { href: '/math-tutoring', label: 'Math Tutoring' },
+            { href: '/math-tutoring', label: 'Math & Physics' },
         ],
     },
     { href: '/practice-apps', label: 'Practice Apps' },
     { href: '/about', label: 'About' },
-    { href: '/testimonials', label: 'Testimonials' },
     { href: '/blog', label: 'Blog' },
 ];
 
@@ -145,7 +144,6 @@ export default function Header() {
                     )}
                     <Link href="/practice-apps" className="block py-2 text-primary font-semibold" onClick={() => setMobileOpen(false)} id="mobile-apps-link">🚀 Practice Apps</Link>
                     <Link href="/about" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>About</Link>
-                    <Link href="/testimonials" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>Testimonials</Link>
                     <Link href="/blog" className="block py-2 text-textMain hover:text-primary font-medium" onClick={() => setMobileOpen(false)}>Blog</Link>
                     <Link href="/contact" className="btn-primary w-full justify-center mt-3" onClick={() => setMobileOpen(false)} id="mobile-book-btn">
                         Book Free Session

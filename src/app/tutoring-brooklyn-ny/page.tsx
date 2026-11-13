@@ -80,9 +80,9 @@ export default function BrooklynLocalPage() {
                             <div className="text-muted text-sm mt-1">By appointment, weekdays and weekends</div>
                         </div>
                         <div className="p-5 bg-bg rounded-xl">
-                            <div className="text-2xl mb-2">⭐</div>
-                            <div className="font-semibold text-primary text-sm">Rating</div>
-                            <div className="text-muted text-sm mt-1">5.0 / 5.0 based on 4 reviews</div>
+                            <div className="text-2xl mb-2">🎓</div>
+                            <div className="font-semibold text-primary text-sm">Education</div>
+                            <div className="text-muted text-sm mt-1">Stuyvesant · Wesleyan</div>
                         </div>
                     </div>
                 </section>
@@ -122,7 +122,7 @@ export default function BrooklynLocalPage() {
                                 { href: '/gmat-prep', label: 'GMAT Prep' },
                                 { href: '/regents-review', label: 'Regents Review' },
                                 { href: '/ap-english', label: 'AP English' },
-                                { href: '/math-tutoring', label: 'Math Tutoring' },
+                                { href: '/math-tutoring', label: 'Math & Physics' },
                             ].map((s) => (
                                 <Link key={s.href} href={s.href} className="bg-bg border border-gray-200 rounded-xl p-4 text-center text-primary font-medium text-sm hover:border-primary hover:bg-primary hover:text-white transition-all" id={`local-service-${s.label.toLowerCase().replace(/\s+/g, '-')}`}>
                                     {s.label}

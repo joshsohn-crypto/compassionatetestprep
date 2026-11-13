@@ -96,7 +96,6 @@ export default function AboutPage() {
                             </div>
                             <div className="mt-8 flex flex-col sm:flex-row gap-4">
                                 <Link href="/contact" className="btn-primary" id="about-book-cta">Contact Josh for a Session</Link>
-                                <Link href="/testimonials" className="btn-outline" id="about-testimonials-cta">Read Student Reviews</Link>
                                 <a href="https://medium.com/@joshsohn" target="_blank" rel="noopener noreferrer" className="btn-outline" id="about-medium-link">Medium Blog ↗</a>
                             </div>
                         </div>
@@ -108,7 +107,7 @@ export default function AboutPage() {
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="section-heading mb-10">Tutoring Specialties</h2>
                         <div className="flex flex-wrap justify-center gap-3">
-                            {['SAT Prep', 'ACT Prep', 'GMAT Support', 'Trigonometry', 'Statistics', 'AP English', 'Regents Review', 'Precalculus', 'Algebra', 'Reading Comprehension', 'Test Strategy'].map((s) => (
+                            {['SAT Prep', 'ACT Prep', 'SHSAT Prep', 'PSAT Prep', 'GMAT Prep', 'Physics', 'Trigonometry', 'Statistics', 'AP English', 'Regents Review', 'Precalculus', 'Algebra', 'Reading Comprehension', 'Test Strategy'].map((s) => (
                                 <span key={s} className="bg-surface border border-primary/20 text-primary px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors cursor-default">
                                     {s}
                                 </span>

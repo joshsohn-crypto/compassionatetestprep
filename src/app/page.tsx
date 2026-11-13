@@ -18,24 +18,9 @@ const services: { href: string; icon: string; title: string; desc: string; featu
     { href: '/shsat-prep', icon: '🗽', title: 'SHSAT', desc: 'One-on-one prep for the specialized high schools test, from a Stuyvesant grad.', feature: '/apps/shsat-blaster-nyc.jpg' },
     { href: '/act-prep', icon: '🎯', title: 'ACT Prep', desc: 'Prep for the enhanced ACT, and honest advice on ACT versus SAT.' },
     { href: '/gmat-prep', icon: '📊', title: 'GMAT Prep', desc: 'Coaching for the GMAT Focus Edition: Quant, Verbal and Data Insights.' },
-    { href: '/regents-review', icon: '🏫', title: 'Regents Review', desc: 'Math and English Regents prep.' },
+    { href: '/regents-review', icon: '🏫', title: 'Regents Review', desc: 'Math, physics and English Regents prep.' },
     { href: '/ap-english', icon: '📖', title: 'AP English', desc: 'AP Language and AP Literature: close reading and essays.' },
-    { href: '/math-tutoring', icon: '📐', title: 'Math Tutoring', desc: 'Algebra through precalculus, trig and statistics.' },
-];
-
-const testimonials = [
-    {
-        name: 'David T.',
-        test: 'SAT',
-        improvement: '+210 pts',
-        text: 'Josh was an amazing SAT tutor! He really took the time to figure out where I needed help. Thanks to his help, my score went up by 210 points, and I feel so much more prepared for college.',
-    },
-    {
-        name: 'Lena C.',
-        test: 'Parent',
-        improvement: '',
-        text: "As a parent, I couldn't be more grateful for Josh's incredible support. Josh tailors each lesson to fit my child's individual needs, helping her build confidence and mastery in subjects that were once challenging.",
-    },
+    { href: '/math-tutoring', icon: '📐', title: 'Math & Physics', desc: 'Algebra through precalculus, statistics and physics.' },
 ];
 
 const faqs = [
@@ -61,7 +46,6 @@ const localBusinessSchema = {
     geo: { '@type': 'GeoCoordinates', latitude: 40.6782, longitude: -73.9442 },
     areaServed: ['Brooklyn', 'New York City', 'Online'],
     priceRange: '$$',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '4' },
 };
 
 const faqSchema = {
@@ -312,46 +296,6 @@ export default function HomePage() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ───── TESTIMONIALS ───── */}
-                <section id="testimonials-preview" className="py-20 px-4 sm:px-6 bg-primary/5">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="section-heading">What Students & Parents Say</h2>
-                            <p className="section-subheading">In their words.</p>
-                        </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-10">
-                            {testimonials.map((t) => (
-                                <div key={t.name} className="card relative">
-                                    <div className="text-accent text-4xl font-heading leading-none mb-4">&ldquo;</div>
-                                    <p className="text-textMain/80 leading-relaxed mb-6 italic">{t.text}</p>
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-11 h-11 rounded-full bg-primary text-white flex items-center justify-center font-heading font-semibold flex-shrink-0" aria-hidden>
-                                                {t.name.charAt(0)}
-                                            </div>
-                                            <div>
-                                                <div className="font-semibold text-primary">{t.name}</div>
-                                                <div className="text-xs text-muted">{t.test}</div>
-                                            </div>
-                                        </div>
-                                        {t.improvement && (
-                                            <span className="bg-primary text-white text-sm font-bold px-3 py-1.5 rounded-lg">
-                                                {t.improvement}
-                                            </span>
-                                        )}
-                                    </div>
-                                    <div className="flex text-accent gap-0.5 mt-3">{'★★★★★'}</div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="text-center">
-                            <Link href="/testimonials" className="btn-outline" id="testimonials-see-all">
-                                Read All Testimonials
-                            </Link>
                         </div>
                     </div>
                 </section>

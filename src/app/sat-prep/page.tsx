@@ -19,12 +19,6 @@ const schema = {
     provider: { '@type': 'LocalBusiness', name: 'Compassionate Test Prep', address: { '@type': 'PostalAddress', addressLocality: 'Brooklyn', addressRegion: 'NY' } },
     description: 'Personalized SAT prep tutoring in Brooklyn, NY. 25+ years of experience.',
     areaServed: 'Brooklyn, NY',
-    review: {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5' },
-        author: { '@type': 'Person', name: 'David T.' },
-        reviewBody: 'My score went up by 210 points. Josh made the SAT way less stressful.',
-    },
 };
 
 export default function SATPage() {
@@ -42,15 +36,6 @@ export default function SATPage() {
                             One-on-one, data-driven coaching for the digital SAT and PSAT, built around exactly what each student misses and why.
                         </p>
                         <Link href="/contact" className="btn-primary text-base px-8 py-4" id="sat-cta-hero">Contact for a Free SAT Session</Link>
-                    </div>
-                </section>
-
-                {/* Score win */}
-                <section className="py-16 px-4 sm:px-6 bg-accent/10 border-b border-accent/20">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <div className="text-6xl font-heading font-bold text-accent mb-2">+210</div>
-                        <div className="text-primary font-semibold text-lg mb-2">Points gained — David T., Brooklyn NY</div>
-                        <p className="text-muted italic max-w-xl mx-auto">&ldquo;Josh really took the time to figure out where I needed help and broke things down in a way that made sense. The SAT can feel overwhelming, but Josh made it way less stressful.&rdquo;</p>
                     </div>
                 </section>
 

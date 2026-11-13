@@ -8,7 +8,7 @@ const services = [
     { href: '/gmat-prep', label: 'GMAT Prep' },
     { href: '/regents-review', label: 'Regents Review' },
     { href: '/ap-english', label: 'AP English' },
-    { href: '/math-tutoring', label: 'Math Tutoring' },
+    { href: '/math-tutoring', label: 'Math & Physics' },
 ];
 
 export default function Footer() {
@@ -64,7 +64,6 @@ export default function Footer() {
                     <ul className="space-y-2">
                         {[
                             { href: '/about', label: 'About Josh' },
-                            { href: '/testimonials', label: 'Testimonials' },
                             { href: '/tutoring-brooklyn-ny', label: 'Brooklyn Tutoring' },
                             { href: 'https://medium.com/@joshsohn', label: 'Medium Blog ↗', external: true },
                             { href: '/contact', label: 'Book a Session' },

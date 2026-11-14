@@ -37,7 +37,7 @@ const apps = [
         icon: '🗽',
         name: 'SHSAT Blaster',
         who: 'For 7th and 8th graders',
-        desc: 'Every skill is a stop on a map of New York City, from the Brooklyn Bridge to Coney Island, with all four official DOE practice tests in the on-screen format kids see on test day.',
+        desc: 'Every skill is a stop on a map of New York City, from the Brooklyn Bridge to Coney Island, with all four official DOE practice tests in the on-screen format kids see on test day. Built from real SHSAT questions, each showing how real test-takers did on it.',
         img: '/apps/shsat-blaster-nyc.jpg',
         alt: 'SHSAT Blaster New York City map',
         href: 'https://ctp-shsat-blaster.netlify.app/?src=site',

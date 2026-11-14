@@ -88,6 +88,40 @@ export default function SHSATPage() {
                     </div>
                 </section>
 
+                {/* Real questions, real data */}
+                <section className="py-20 px-4 sm:px-6 bg-bg" id="real-questions">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="section-heading text-center mb-4" data-reveal>Built from real SHSAT questions, not imitations</h2>
+                        <p className="section-subheading text-center max-w-2xl mx-auto mb-12" data-reveal>
+                            Most SHSAT practice is written to look like the test. SHSAT Blaster starts from the real thing: questions from the official SHSAT forms and the DOE&apos;s new-format practice tests.
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-10 items-center">
+                            <ul className="space-y-5 text-textMain leading-relaxed" data-reveal>
+                                <li><b className="text-primary">Real difficulty.</b> Every official question comes with how real test-takers did on it: what share got it right, and which wrong answer pulled the most students. Kids learn which traps catch people, and why.</li>
+                                <li><b className="text-primary">The right level for each student.</b> Real difficulty data lets the app match questions to where your child is, so practice feels like progress instead of a wall.</li>
+                                <li><b className="text-primary">Test-day format.</b> Full adaptive tests with 50 ELA and 50 Math questions in three hours, with the same tools and question types, and no calculator.</li>
+                            </ul>
+                            <div className="card" data-reveal aria-label="Example: how real test-takers answered one question">
+                                <p className="text-sm font-semibold text-primary mb-1">How real test-takers answered one question</p>
+                                <p className="text-xs text-muted mb-4">Illustration. In the app, every official question carries its own real numbers.</p>
+                                {[
+                                    { l: 'A', p: 9 },
+                                    { l: 'B', p: 58, ok: true },
+                                    { l: 'C', p: 27 },
+                                    { l: 'D', p: 6 },
+                                ].map((r) => (
+                                    <div key={r.l} className={`grid grid-cols-[2.5rem_1fr_2.75rem] items-center gap-2 my-2 text-sm ${r.ok ? 'font-semibold text-primary' : 'text-muted'}`}>
+                                        <span>{r.l}{r.ok ? ' ✓' : ''}</span>
+                                        <span className="h-2.5 rounded-full bg-gray-100 overflow-hidden"><span className={`block h-full rounded-full ${r.ok ? 'bg-primary' : 'bg-gray-300'}`} style={{ width: `${r.p}%` }} /></span>
+                                        <span className="text-right">{r.p}%</span>
+                                    </div>
+                                ))}
+                                <p className="text-sm text-muted mt-4 leading-relaxed">A student who picked C fell for the most popular trap. Seeing that turns a red X into a lesson.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <AppCallout ids={['shsat']} title="Practice for the SHSAT between sessions" />
 
                 {/* CTA */}

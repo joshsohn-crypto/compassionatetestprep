@@ -56,7 +56,7 @@ Take both a real SAT practice test and a real ACT practice test, convert the sco
 - Good at analytical reasoning
 - Does better with more time per question
 
-When in doubt, book a free consultation. A short diagnostic session with Josh can reveal the right test in one hour.
+When in doubt, book a free 30-minute intro session. I'll help you figure out which test fits your child best.
     `,
     },
     'how-to-study-for-ny-regents-exams': {
@@ -67,7 +67,7 @@ When in doubt, book a free consultation. A short diagnostic session with Josh ca
 Everything Brooklyn students need to know about Regents exams.
 
 **What Are Regents Exams?**
-Regents are New York State standardized high school exams required for graduation with a Regents diploma. There are 10+ Regents exams covering subjects like Algebra, English, Living Environment, US History, and more.
+Regents are New York State standardized high school exams required for graduation with a Regents diploma. There are 10+ Regents exams covering subjects like Algebra, English, Life Science: Biology, US History, and more.
 
 **When to Start Studying**
 - 6–8 weeks before the exam for most students
@@ -75,7 +75,7 @@ Regents are New York State standardized high school exams required for graduatio
 
 **How to Study**
 1. Get the official NY State Regents prep booklets (free online)
-2. Do past Regents exams in full (they're all free on nysedregents.org)
+2. Do past Regents exams in full (they're all free on nysedregents.org). For Life Science: Biology and Earth and Space Sciences, only the exams given since June 2025 match the new format
 3. Score each exam and categorize mistakes by topic
 4. Target your weak topics specifically
 

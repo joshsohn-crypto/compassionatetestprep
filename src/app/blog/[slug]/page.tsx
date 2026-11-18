@@ -5,9 +5,6 @@ import Footer from '@/components/Footer';
 
 // This is a static blog post template.
 // In a future phase, replace with MDX or a headless CMS like Sanity.
-export const metadata: Metadata = {
-    title: 'Blog Post',
-};
 
 const posts: Record<string, {
     title: string;
@@ -113,6 +110,98 @@ The GMAT rewards efficient, strategic preparation — which is exactly what Comp
     },
 };
 
+export function generateStaticParams() {
+    return Object.keys(posts).map((slug) => ({ slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+    const post = posts[params.slug];
+    if (!post) {
+        return { title: 'Post Not Found' };
+    }
+    const description = post.content.trim().split('\n')[0];
+    return {
+        title: post.title,
+        description,
+        alternates: { canonical: `https://www.compassionatetestprep.com/blog/${params.slug}` },
+    };
+}
+
+// Renders **bold** and *italic* inside a line of text.
+function renderInline(text: string) {
+    const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+    return parts.map((part, j) => {
+        if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+            return <strong key={j} className="text-primary">{part.slice(2, -2)}</strong>;
+        }
+        if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+            return <em key={j}>{part.slice(1, -1)}</em>;
+        }
+        return part;
+    });
+}
+
+// Turns the post text into headings, paragraphs and bulleted or numbered lists.
+function renderContent(content: string) {
+    const lines = content.trim().split('\n').map((l) => l.trim());
+    const blocks: JSX.Element[] = [];
+    let i = 0;
+    while (i < lines.length) {
+        const line = lines[i];
+        if (line === '') {
+            i++;
+            continue;
+        }
+        if (/^\*\*[^*]+\*\*$/.test(line)) {
+            blocks.push(<h2 key={i} className="font-heading text-xl font-bold text-primary mt-8 mb-3">{line.slice(2, -2)}</h2>);
+            i++;
+            continue;
+        }
+        if (line.startsWith('- ')) {
+            const start = i;
+            const items: string[] = [];
+            while (i < lines.length && lines[i].startsWith('- ')) {
+                items.push(lines[i].slice(2));
+                i++;
+            }
+            blocks.push(
+                <ul key={start} className="list-disc pl-6 space-y-2 mb-4">
+                    {items.map((item, j) => <li key={j}>{renderInline(item)}</li>)}
+                </ul>
+            );
+            continue;
+        }
+        if (/^\d+\.\s/.test(line)) {
+            const start = i;
+            const items: string[] = [];
+            while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+                items.push(lines[i].replace(/^\d+\.\s+/, ''));
+                i++;
+            }
+            blocks.push(
+                <ol key={start} className="list-decimal pl-6 space-y-2 mb-4">
+                    {items.map((item, j) => <li key={j}>{renderInline(item)}</li>)}
+                </ol>
+            );
+            continue;
+        }
+        const start = i;
+        const textLines: string[] = [];
+        while (
+            i < lines.length &&
+            lines[i] !== '' &&
+            !/^\*\*[^*]+\*\*$/.test(lines[i]) &&
+            !lines[i].startsWith('- ') &&
+            !/^\d+\.\s/.test(lines[i])
+        ) {
+            textLines.push(lines[i]);
+            i++;
+        }
+        blocks.push(<p key={start} className="mb-4">{renderInline(textLines.join(' '))}</p>);
+    }
+    return blocks;
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
     const post = posts[params.slug];
 
@@ -129,8 +218,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </>
         );
     }
-
-    const paragraphs = post.content.trim().split('\n\n');
 
     return (
         <>
@@ -151,26 +238,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     <div className="max-w-3xl mx-auto">
                         <div className="bg-surface rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
                             <div className="prose prose-lg max-w-none text-textMain/80 leading-relaxed">
-                                {paragraphs.map((para, i) => {
-                                    if (para.startsWith('**') && para.endsWith('**')) {
-                                        return <h2 key={i} className="font-heading text-xl font-bold text-primary mt-8 mb-3">{para.replace(/\*\*/g, '')}</h2>;
-                                    }
-                                    if (para.startsWith('- ')) {
-                                        const items = para.split('\n').filter(l => l.startsWith('- '));
-                                        return <ul key={i} className="list-disc pl-6 space-y-2">{items.map((item, j) => <li key={j}>{item.replace('- ', '')}</li>)}</ul>;
-                                    }
-                                    // Handle inline bold
-                                    const parts = para.split(/(\*\*[^*]+\*\*)/g);
-                                    return (
-                                        <p key={i} className="mb-4">
-                                            {parts.map((part, j) =>
-                                                part.startsWith('**') && part.endsWith('**')
-                                                    ? <strong key={j} className="text-primary">{part.replace(/\*\*/g, '')}</strong>
-                                                    : part
-                                            )}
-                                        </p>
-                                    );
-                                })}
+                                {renderContent(post.content)}
                             </div>
                         </div>
 

@@ -118,6 +118,7 @@ export default function BrooklynLocalPage() {
                             {[
                                 { href: '/sat-prep', label: 'SAT Prep' },
                                 { href: '/shsat-prep', label: 'SHSAT Prep' },
+                                { href: '/ssat-prep', label: 'SSAT Prep' },
                                 { href: '/act-prep', label: 'ACT Prep' },
                                 { href: '/gmat-prep', label: 'GMAT Prep' },
                                 { href: '/regents-review', label: 'Regents Review' },

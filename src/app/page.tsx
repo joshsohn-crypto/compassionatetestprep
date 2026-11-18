@@ -9,13 +9,14 @@ import { practiceApps } from '@/lib/apps';
 export const metadata: Metadata = {
     title: 'Expert Test Prep Tutoring in Brooklyn, NY',
     description:
-        'One-on-one SAT, SHSAT and ACT prep in Brooklyn and online. 25+ years, 2,200+ students, and practice apps built for my students. Book a free intro session.',
+        'One-on-one SAT, SHSAT, SSAT and ACT prep in Brooklyn and online. 25+ years, 2,200+ students, and practice apps built for my students. Book a free intro session.',
     alternates: { canonical: 'https://www.compassionatetestprep.com' },
 };
 
 const services: { href: string; icon: string; title: string; desc: string; feature?: string }[] = [
     { href: '/sat-prep', icon: '📝', title: 'SAT & PSAT', desc: 'Data-driven prep for the digital SAT that targets each student\'s specific gaps.', feature: '/apps/sat-blaster-map.jpg' },
     { href: '/shsat-prep', icon: '🗽', title: 'SHSAT', desc: 'One-on-one prep for the specialized high schools test, from a Stuyvesant grad.', feature: '/apps/shsat-blaster-nyc.jpg' },
+    { href: '/ssat-prep', icon: '🎒', title: 'SSAT', desc: 'Prep for private and boarding school admissions, including a plan for the guessing penalty.' },
     { href: '/act-prep', icon: '🎯', title: 'ACT Prep', desc: 'Prep for the enhanced ACT, and honest advice on ACT versus SAT.' },
     { href: '/gmat-prep', icon: '📊', title: 'GMAT Prep', desc: 'Coaching for the GMAT Focus Edition: Quant, Verbal and Data Insights.' },
     { href: '/regents-review', icon: '🏫', title: 'Regents Review', desc: 'Math, physics and English Regents prep.' },
@@ -28,14 +29,14 @@ const faqs = [
     { q: 'How many sessions will my child need?', a: "It depends on the student's starting point and target score. After we talk and see where your child is starting, I'll recommend a plan. Most students meet with me weekly for an hour." },
     { q: 'What makes Compassionate Test Prep different?', a: 'Every session is one on one with me. I diagnose careless errors versus knowledge gaps, compare each student with 25 years of my own student data, and give them practice apps I built so I can see exactly what they do between sessions.' },
     { q: 'Do you offer a free intro session?', a: 'Yes. Book a free 30-minute intro session to meet me, talk through your goals and see if it\'s a good fit, with no commitment.' },
-    { q: 'What ages and grades do you work with?', a: 'Middle school through graduate school: SHSAT for 7th and 8th graders, SAT, PSAT and ACT for high schoolers, and subject tutoring along the way.' },
+    { q: 'What ages and grades do you work with?', a: 'Middle school through graduate school: SHSAT for 7th and 8th graders, SSAT for private and boarding school applicants, SAT, PSAT and ACT for high schoolers, and subject tutoring along the way.' },
 ];
 
 const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Compassionate Test Prep',
-    description: 'Expert SAT, ACT, GMAT, Regents, AP English and math tutoring in Brooklyn, NY.',
+    description: 'Expert SAT, SSAT, ACT, GMAT, Regents, AP English and math tutoring in Brooklyn, NY.',
     url: 'https://www.compassionatetestprep.com',
     address: {
         '@type': 'PostalAddress',

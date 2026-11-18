@@ -90,6 +90,7 @@ export default function ContactPage() {
                                             <option>GMAT Prep</option>
                                             <option>Regents Review</option>
                                             <option>SHSAT Prep</option>
+                                            <option>SSAT Prep</option>
                                             <option>PSAT Prep</option>
                                             <option>AP English</option>
                                             <option>Math Tutoring</option>
